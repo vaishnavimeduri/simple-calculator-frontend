@@ -110,8 +110,11 @@ function buttonclicked(button){
     }
     case "clr":document.getElementById("display").innerText="0"
     break;
-    case "del":document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)
+    case "del":{
+        if(document.getElementById("display").innerText!='0')
+        document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)
     break;
+    }
     case "=":evaluate()
 }
 }
