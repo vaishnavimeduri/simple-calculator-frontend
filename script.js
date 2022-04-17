@@ -111,8 +111,11 @@ function buttonclicked(button){
     case "clr":document.getElementById("display").innerText="0"
     break;
     case "del":{
-        if(document.getElementById("display").innerText!='0')
+        if(document.getElementById("display").innerText!='0'&&document.getElementById("display").innerText.length>1)
         document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)
+        else{
+            document.getElementById("display").innerText='0' 
+        }
     break;
     }
     case "=":evaluate()
