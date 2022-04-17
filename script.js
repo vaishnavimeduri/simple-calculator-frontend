@@ -147,7 +147,7 @@ function isOperator(button){
 function evaluate(){
     try{
       document.getElementById("display").innerText=eval(document.getElementById("display").innerText)
-      document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,16)
+      
         }
     catch(err){
         alert('enter valid expression')
