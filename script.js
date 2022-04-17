@@ -1,8 +1,5 @@
 // ----------------------------for digits,clr,del,.,=-----------------------
 function buttonclicked(button){
-    if(document.getElementById("display").innerText.length==15){
-        return
-    }
     switch(button){
     case "0":{
         if(document.getElementById("display").innerText=="0"||document.getElementById("display").innerText=="00"){
@@ -123,9 +120,6 @@ function buttonclicked(button){
 }
 // ----------------------------------for operators---------------------------------
 function operatorButtonClicked(button){
-    if(document.getElementById("display").innerText.length==15){
-        return
-    }
 if(isOperator(document.getElementById("display").innerText[document.getElementById("display").innerText.length-1])){
 document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)+button
 console.log('hi')
