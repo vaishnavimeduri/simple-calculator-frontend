@@ -1,5 +1,14 @@
 // ----------------------------for digits,clr,del,.,=-----------------------
+let flag=false
 function buttonclicked(button){
+    if(document.getElementById("display").innerText.length==16){
+        document.getElementById("display").innerText=''
+    }
+    if(flag==true){
+        flag=false
+       document.getElementById("display").innerText=button
+    }
+    else{
     switch(button){
     case "0":{
         if(document.getElementById("display").innerText=="0"||document.getElementById("display").innerText=="00"){
@@ -117,6 +126,7 @@ function buttonclicked(button){
     }
     case "=":evaluate()
 }
+    }
 }
 // ----------------------------------for operators---------------------------------
 function operatorButtonClicked(button){
@@ -139,6 +149,7 @@ function isOperator(button){
 
 // -----------------------------------eval------------------------------------------
 function evaluate(){
+    flag=true;
     try{
       document.getElementById("display").innerText=eval(document.getElementById("display").innerText)
       
