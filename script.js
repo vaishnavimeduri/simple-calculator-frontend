@@ -130,6 +130,7 @@ function buttonclicked(button){
 }
 // ----------------------------------for operators---------------------------------
 function operatorButtonClicked(button){
+    flag=false
 if(isOperator(document.getElementById("display").innerText[document.getElementById("display").innerText.length-1])){
 document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)+button
 console.log('hi')
