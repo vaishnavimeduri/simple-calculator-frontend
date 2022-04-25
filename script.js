@@ -4,6 +4,10 @@ function buttonclicked(button){
     if(document.getElementById("display").innerText.length==16){
         document.getElementById("display").innerText=''
     }
+    if(button=="clr"){
+    document.getElementById("display").innerText="0"
+    return}
+   
     if(flag==true){
         flag=false
        document.getElementById("display").innerText=button
@@ -114,8 +118,7 @@ function buttonclicked(button){
         }
     break;
     }
-    case "clr":document.getElementById("display").innerText="0"
-    break;
+    
     case "del":{
         if(document.getElementById("display").innerText!='0'&&document.getElementById("display").innerText.length>1)
         document.getElementById("display").innerText=document.getElementById("display").innerText.slice(0,-1)
